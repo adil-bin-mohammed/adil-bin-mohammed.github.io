@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f6f8;--surface:#ffffff;--ink:#14212b;--mute:#5b6b78;--line:#d9e0e6;--accent:#1b5fd6;--accent2:#e8eefb;--ok:#1b5fd6;--off:#d9e0e6;
+:root{--bg:#f4f6f8;--surface:#ffffff;--ink:#14212b;--mute:#5b6b78;--line:#d9e0e6;--accent:#1b5fd6;--accent2:#e8eefb;--ok:#1b5fd6;--jic:#0a2a66;--off:#d9e0e6;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--surface:#16212c;--ink:#e8eef4;--mute:#93a3b1;--line:#263441;--accent:#6ea2ff;--accent2:#1b2a40;--ok:#6ea2ff;--off:#263441;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0f1720;--surface:#16212c;--ink:#e8eef4;--mute:#93a3b1;--line:#263441;--accent:#6ea2ff;--accent2:#1b2a40;--ok:#6ea2ff;--off:#263441;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--surface:#16212c;--ink:#e8eef4;--mute:#93a3b1;--line:#263441;--accent:#6ea2ff;--accent2:#1b2a40;--ok:#6ea2ff;--jic:#2a4fb8;--off:#263441;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1720;--surface:#16212c;--ink:#e8eef4;--mute:#93a3b1;--line:#263441;--accent:#6ea2ff;--accent2:#1b2a40;--ok:#6ea2ff;--jic:#2a4fb8;--off:#263441;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -37,7 +37,7 @@ nav a:hover{color:var(--ink)}
 .record .sub{color:var(--mute);margin:6px 0 22px;font-size:15px}
 .grid{display:flex;flex-wrap:wrap;gap:8px}
 .cell{width:44px;height:44px;border-radius:8px;background:var(--ok);border:0;cursor:pointer;opacity:0;transform:scale(.6);animation:pop .4s ease forwards;animation-delay:calc(var(--i)*70ms + .3s);transition:transform .15s}
-.cell.b{background:var(--accent);filter:brightness(.8)}
+.cell.b{background:var(--jic)}
 .cell:hover,.cell:focus-visible{transform:scale(1.12)}
 .cell[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
 @keyframes pop{to{opacity:1;transform:scale(1)}}
@@ -95,7 +95,7 @@ footer{border-top:1px solid var(--line);padding:22px 0;color:var(--mute);font-si
     <h2 id="rec">Projects delivered</h2>
     <p class="sub">Each square is a complex software project I helped ship. Select one to see the details.</p>
     <div class="grid" id="grid"></div>
-    <div class="legend"><span><i style="background:var(--ok)"></i>Codedady</span><span><i style="background:var(--accent);filter:brightness(.8)"></i>JIC IT Solutions</span></div>
+    <div class="legend"><span><i style="background:var(--ok)"></i>Codedady</span><span><i style="background:var(--jic)"></i>JIC IT Solutions</span></div>
     <div class="readout" id="readout" aria-live="polite">Select a square. Across 11 projects, both roles reported high client satisfaction.</div>
   </div>
 
